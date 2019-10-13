@@ -1,4 +1,6 @@
-/*Math.pow()判斷是否超過範圍*/
+/* Math.pow()判斷是否超過範圍
+   練習型態強轉 (int)long
+*/
 class Solution {
     public int reverse(int x) {
         long reverse_sum = 0;
