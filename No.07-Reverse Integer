@@ -1,0 +1,28 @@
+/*Math.pow()判斷是否超過範圍*/
+class Solution {
+    public int reverse(int x) {
+        long reverse_sum = 0;
+        if(x > 0){
+            while(x > 0){
+                reverse_sum = reverse_sum*10 + x%10;
+                x /= 10;
+            }
+        }
+        else{
+            x *= -1;
+            while(x > 0){
+                reverse_sum = reverse_sum*10 + x%10;
+                x /= 10;
+            }
+            reverse_sum *= -1;
+        }
+        
+        if( Math.pow(2,31)*(-1) > reverse_sum || reverse_sum > Math.pow(2,31) ){
+            return 0;
+        }
+        else{
+            return (int)reverse_sum;
+        }
+        
+    }
+}
